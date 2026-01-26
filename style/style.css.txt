@@ -1,0 +1,675 @@
+/* ============================================
+   ECLIPSE - MODERN STUDENT-FRIENDLY UI
+   Vibrant, Fun, and Engaging Design
+   ============================================ */
+
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Global Variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --blue-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --pink-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --dark-bg: #0F172A;
+  --card-bg: #1E293B;
+  --text-primary: #F1F5F9;
+  --text-secondary: #CBD5E1;
+  --accent-purple: #8B5CF6;
+  --accent-blue: #3B82F6;
+  --accent-pink: #EC4899;
+}
+
+/* Global Styles */
+* {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Main Container - Better Alignment */
+.main .block-container {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: 100%;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Ensure content uses full width on wide screens */
+@media (min-width: 1200px) {
+  .main .block-container {
+    max-width: 95%;
+  }
+}
+
+/* Smooth Page Load Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header Styling with Gradient Text */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Subheader - Removed blurry glow, using crisp text */
+.stSubheader {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Markdown Text Styling */
+.stMarkdown {
+  line-height: 1.9;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.stMarkdown p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.stMarkdown strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Divider with Gradient */
+hr {
+  border: none;
+  height: 3px;
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  margin: 3rem 0;
+  border-radius: 2px;
+  animation: gradient 3s ease infinite;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Image Styling with Glow */
+.stImage {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+  margin: 2rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stImage:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.3);
+}
+
+/* Button Styling - Modern & Vibrant */
+.stButton > button {
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 0.875rem 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: gradient 3s ease infinite;
+}
+
+.stButton > button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.stButton > button:hover::before {
+  left: 100%;
+}
+
+.stButton > button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.stButton > button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Download Button - Different Gradient */
+.stDownloadButton > button {
+  background: var(--success-gradient);
+  background-size: 200% 200%;
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4), 0 0 20px rgba(79, 172, 254, 0.2);
+  animation: gradient 3s ease infinite;
+}
+
+.stDownloadButton > button:hover {
+  box-shadow: 0 15px 40px rgba(79, 172, 254, 0.6), 0 0 30px rgba(79, 172, 254, 0.4);
+}
+
+/* Sidebar Styling - Clean without pseudo-elements */
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+  border-right: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove any top padding that might exist */
+[data-testid="stSidebar"] > div:first-child {
+  padding-top: 0 !important;
+}
+
+/* Style the logo container that we'll add via Python */
+.sidebar-logo-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 21rem !important;
+  height: 140px !important;
+  background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%) !important;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.3) !important;
+  z-index: 999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+/* Push sidebar content down to make room for fixed logo */
+[data-testid="stSidebarNav"] {
+  margin-top: 140px !important;
+  padding-top: 1rem !important;
+}
+
+/* Sidebar Logo Image - Proper styling */
+[data-testid="stSidebar"] img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  transition: transform 0.3s ease;
+  padding: 0.5rem;
+}
+
+[data-testid="stSidebar"] img:hover {
+  transform: scale(1.05);
+}
+
+/* Sidebar text content */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+  color: var(--text-primary);
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] a {
+  color: var(--accent-purple);
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] a:hover {
+  background: rgba(139, 92, 246, 0.2);
+  transform: translateX(5px);
+}
+
+/* Form Input Styling - Modern & Clean */
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  resize: vertical;
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: none;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2), 0 8px 25px rgba(139, 92, 246, 0.3);
+  background: rgba(30, 41, 59, 1);
+  transform: translateY(-2px);
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
+  color: rgba(203, 213, 225, 0.5);
+  font-style: italic;
+}
+
+textarea {
+  min-height: 140px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Submit Button - Eye-catching */
+button[type=submit], button[type=":submit"] {
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  color: white;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: gradient 3s ease infinite;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button[type=submit]::before, button[type=":submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+button[type=submit]:hover::before, button[type=":submit"]:hover::before {
+  left: 100%;
+}
+
+button[type=submit]:hover, button[type=":submit"]:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+button[type=submit]:active, button[type=":submit"]:active {
+  transform: translateY(-1px) scale(1);
+}
+
+/* Link Styling */
+a {
+  color: var(--accent-purple);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: #C4B5FD;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Option Menu Styling */
+[data-testid="stOptionMenu"] {
+  background: rgba(30, 41, 59, 0.9);
+  border-radius: 16px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+[data-testid="stOptionMenu"]:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+}
+
+/* Code Block Styling */
+.stCodeBlock {
+  border-radius: 16px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Metric Styling */
+[data-testid="stMetricValue"] {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* Success/Info/Error Messages */
+.stSuccess {
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid #10B981;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.stInfo {
+  background: rgba(59, 130, 246, 0.15);
+  border-left: 4px solid #3B82F6;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.stError {
+  background: rgba(239, 68, 68, 0.15);
+  border-left: 4px solid #EF4444;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  animation: gradient 3s ease infinite;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-gradient);
+  background-size: 200% 200%;
+}
+
+/* Hide sidebar scrollbar completely */
+[data-testid="stSidebar"] ::-webkit-scrollbar {
+  display: none;
+}
+
+[data-testid="stSidebar"] {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Table Styling */
+.stDataFrame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+/* Selectbox and Radio Styling */
+.stSelectbox > div > div, .stRadio > div > div {
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.stSelectbox > div > div:hover, .stRadio > div > div:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* File Uploader Styling */
+.stFileUploader {
+  border: 3px dashed rgba(139, 92, 246, 0.4);
+  border-radius: 20px;
+  padding: 3rem;
+  background: rgba(30, 41, 59, 0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.stFileUploader:hover {
+  border-color: rgba(139, 92, 246, 0.7);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Expander Styling */
+.streamlit-expanderHeader {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 16px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.streamlit-expanderHeader:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Progress Bar Styling */
+.stProgress > div > div > div {
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  animation: gradient 3s ease infinite;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Tabs Styling */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 12px;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.stTabs [data-baseweb="tab"] {
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 12px 24px;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+  background: rgba(30, 41, 59, 1);
+  border-color: rgba(139, 92, 246, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.stTabs [aria-selected="true"] {
+  background: var(--primary-gradient);
+  background-size: 200% 200%;
+  border-color: transparent;
+  color: white;
+  animation: gradient 3s ease infinite;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+/* Social Media Badges Container */
+.stComponents iframe, .stComponents div {
+  border-radius: 12px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.stComponents iframe:hover, .stComponents div:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Styling - No blur for crispness */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: none;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card-like Containers - No blur */
+.stContainer {
+  background: rgba(30, 41, 59, 0.95);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 92, 246, 0.2);
+  margin: 2rem 0;
+  backdrop-filter: none;
+  transition: all 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stContainer:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.3);
+  transform: translateY(-5px);
+}
+
+/* ============================================
+   GLOBAL FIXES FOR CRISP TEXT & ALIGNMENT
+   ============================================ */
+
+/* Remove all blur effects for crisp rendering */
+* {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* Remove backdrop blur from all elements */
+* {
+  backdrop-filter: none !important;
+}
+
+/* Better content alignment - use more screen space */
+.main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure option menu is crisp */
+[data-baseweb="select"], [data-baseweb="select"] * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Fix any remaining blurry widgets */
+.stSelectbox, .stRadio, .stTextInput, .stTextArea {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Better spacing for wide screens */
+@media (min-width: 1400px) {
+  .main .block-container {
+    max-width: 98%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
