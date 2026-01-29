@@ -2,7 +2,6 @@ streamlit==1.33.0
 
 pandas==2.1.4
 numpy==1.26.4
-pyarrow==12.0.1
 
 altair
 openpyxl
@@ -15,4 +14,3 @@ GitPython
 extra-streamlit-components
 streamlit-option-menu
 st-pages
-
