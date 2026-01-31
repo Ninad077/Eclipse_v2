@@ -359,11 +359,10 @@ Hi, Ninad here!
                 them and install the setup first. Other non-technical prerequisites you need are: **Passion & curiosity**. Be passionate & be curious about the
                 things to learn & don't be intimidated if you don't understand something. Machine learning requires practice and with time you would be proficient. 
                 My only advice to you is that, make your foundations about the core concepts very clear which would prepare you to learn more advanced concepts in 
-                future with ease. The entire Machine Learning is taught using several libraries most important being scikit learn, pandas, numpy, matplotlib, seaborn & most
+                future with ease. The entire Machine Learning is taught using several libraries spanning from scikit learn, pandas, numpy, matplotlib, seaborn & most
                 importantly torch. 
-                On the other hand, the most important Library used in Deep Learning is tensorflow/torch. So once you learn the basics well, try implementing projects using these 
-                libraries so that you get well versed in them with time. Also, I am of the opinion that learning something is no less than implementing a Machine 
-                Learning algorithm, the more you train, the better would be results. So keep practicing every day.
+                So once you learn the basics well, try implementing projects using these libraries so that you get well versed in them with time. Also, I am of the opinion 
+                that learning something is no less than implementing a Machine Learning algorithm, the more you train, the better would be results. So keep practicing every day.
                 I have kept this application open source because in the era of MOOCs which do charge subscription, I  don't want to make money an impediment for someone
                 who has the zeal within him or her to learn something new. 
                 For any query related to Machine Learning feel free to text me in the Query box below. To get started, select a Section from the navigation bar above and 
