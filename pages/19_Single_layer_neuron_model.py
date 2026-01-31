@@ -58,6 +58,6 @@ else:
 
     # Create a download button for the notebook
     st.write("----")
-    st.write("To download 'Jupyter introduction' Jupyter notebook click on the button below.")
+    st.write("To download the Jupyter notebook click on the button below.")
     button_label = ":violet[Download Jupyter Notebook]"
     button_download = st.download_button(label=button_label, data=download_notebook(), file_name="Single_layer_neuron_model.ipynb", mime='application/x-ipynb+json')
