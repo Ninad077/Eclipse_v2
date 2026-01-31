@@ -207,7 +207,7 @@ selected_page = option_menu(
     menu_title=None,
     options=["Preprocessing", "Supervised ML", "Unsupervised ML", 
              "Reinforcement ML", "Deep Learning", "Pytorch"],
-    icons=["🐍", "📈", "🧿", "⏰", "🧠", "🔥"],
+    icons=["🐍", "📈", "🧿", "⏰", "🧠", "🔮"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",
@@ -334,7 +334,9 @@ elif selected_page == "Pytorch":
         Page("app.py", "Eclipse",""),
 
         # Deep Learning section
-        Page("pages/19_Single_layer_neuron_model.py","Single layer neuron model", icon="🔥"),
+        Page("pages/19_Single_layer_neuron_model.py","Single layer neuron model", icon="🔮"),
+
+         Page("pages/20_Tensor_operations.py","Tensor operations", icon="🔮"),
 
         Page("pages/Contact_me.py", in_section=False),
     ])
