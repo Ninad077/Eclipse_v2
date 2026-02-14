@@ -340,6 +340,8 @@ elif selected_page == "Pytorch":
 
         Page("pages/21_Tensor_arithmetics.py","Tensor Arithmetics", icon="🔮"),
 
+        Page("pages/22_ReLU.py","ReLU", icon="🔮"),
+
         Page("pages/Contact_me.py", in_section=False),
     ])
 
