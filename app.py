@@ -336,7 +336,9 @@ elif selected_page == "Pytorch":
         # Deep Learning section
         Page("pages/19_Single_layer_neuron_model.py","Single layer neuron model", icon="🔮"),
 
-         Page("pages/20_Tensor_operations.py","Tensor operations", icon="🔮"),
+        Page("pages/20_Tensor_operations.py","Tensor Operations", icon="🔮"),
+
+        Page("pages/21_Tensor_arithmetics.py","Tensor Arithmetics", icon="🔮"),
 
         Page("pages/Contact_me.py", in_section=False),
     ])
